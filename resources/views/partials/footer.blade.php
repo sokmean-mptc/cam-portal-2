@@ -1,5 +1,40 @@
-<footer class="content-info">
-  <div class="container">
-    @php(dynamic_sidebar('sidebar-footer'))
+<footer>
+  <div class="container-fluid">
+    <nav class="d-md-flex justify-content-between"> 
+        
+        @if ( has_nav_menu( 'social_menu' ) )
+        <ul class="d-flex justify-content-center social">
+          <li>{{ __( 'Follow Us', 'cam' ) }}</li>
+          {!! 
+              wp_nav_menu( 
+              array(
+                  'theme_location' => 'social_menu',
+                  'container' => false,
+                  'items_wrap' => '%3$s'
+              )
+              ) 
+          !!}
+        </ul>
+        @endif
+        @if ( has_nav_menu( 'footer_menu' ) )
+            {!! 
+                wp_nav_menu( 
+                array(
+                    'theme_location' => 'footer_menu',
+                    'container' => false,
+                    'menu_class' => 'd-flex justify-content-center footer-nabar'
+                )
+                ) 
+            !!}
+        @endif
+    </nav>
+  </div>
+
+
+  <div class="container-fluid text-center">
+    <small class="copyright">@php(dynamic_sidebar('sidebar-copyright'))</small>
   </div>
 </footer>
+<div class="scroll-to-top">
+  <a href="#body"><i class="icofont-arrow-up"></i></i></a>
+</div>

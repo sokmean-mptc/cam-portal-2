@@ -8,3 +8,7 @@
     {{ get_the_author() }}
   </a>
 </p>
+
+<p>
+  View : {{ $view }}
+</p>

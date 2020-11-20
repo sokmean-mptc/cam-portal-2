@@ -17,6 +17,13 @@ if (! file_exists($composer = __DIR__ . '/vendor/autoload.php')) {
 
 require $composer;
 
+/**
+ * Calling my development code
+ */
+if( class_exists( 'App\\Init' ) ) {
+    App\Init::registerServices();
+}
+
 /*
 |--------------------------------------------------------------------------
 | Register Sage Theme Files
