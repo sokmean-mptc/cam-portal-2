@@ -68,7 +68,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     // register_nav_menus([
-    //     'primary_navigation' => __('Primary Navigation', 'sage')
+    //     'primary_navigation' => __('Primary Navigation', 'egov')
     // ]);
 
     /**
@@ -105,13 +105,13 @@ add_action('after_setup_theme', function () {
      * Enable theme color palette support
      * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes
      */
-    add_theme_support('editor-color-palette', [
-        [
-            'name'  => __('Primary', 'sage'),
-            'slug'  => 'primary',
-            'color' => '#525ddc',
-        ]
-    ]);
+    // add_theme_support('editor-color-palette', [
+    //     [
+    //         'name'  => __('Primary', 'egov'),
+    //         'slug'  => 'primary',
+    //         'color' => '#525ddc',
+    //     ]
+    // ]);
 }, 20);
 
 /**
@@ -128,12 +128,12 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-        'name' => __('Primary', 'sage'),
+        'name' => __('Primary', 'egov'),
         'id' => 'sidebar-primary'
     ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'sage'),
+        'name' => __('Footer', 'egov'),
         'id' => 'sidebar-footer'
     ] + $config);
 });

@@ -9,7 +9,7 @@
               </div>
           </div>
       </form>
-      <ul>
+      {{-- <ul>
           <li>
               <label>Popular Keywords:</label>
               <ul>
@@ -18,6 +18,6 @@
                   <li><a href="service-detail.html">birth registration</a></li>
               </ul>
           </li>
-      </ul>
+      </ul> --}}
   </div>
 </section>

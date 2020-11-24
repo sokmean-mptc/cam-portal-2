@@ -59,7 +59,7 @@
         @endif
         
     </figcaption>
-    <nav class="navbar ml-auto">
+    <nav class="navbar ml-auto d-block d-lg-none">
       <button class="my-2 navbar-toggler navbar-toggler-right text-white nav-icon collapsed" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <div></div>
       </button>
