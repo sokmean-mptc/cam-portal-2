@@ -173,7 +173,7 @@ class CustomPostType
              * Example: array( 'my_feature', array( 'field' => 'value' ) ). 
              * Default is an array containing 'title' and 'editor'.
              */
-            'supports' => array( 'title', 'editor', 'comments', 'revisions', 'trackbacks', 'author', 'excerpt', 'thumbnail', 'custom-fields', 'post-formats' ),
+            'supports' => array( 'title', 'revisions', 'thumbnail' ),
 
             /**
              * (callable) Provide a callback function that sets up the meta boxes for the edit form. 
