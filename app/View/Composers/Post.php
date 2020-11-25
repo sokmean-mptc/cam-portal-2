@@ -31,6 +31,7 @@ class Post extends Composer
         ];
     }
 
+
     /**
      * Returns the post title.
      *

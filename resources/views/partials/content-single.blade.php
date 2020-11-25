@@ -9,9 +9,8 @@
     @php(the_content())
   </div>
 
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'egov'), 'after' => '</p></nav>']) !!}
-  </footer>
+  <h4>Related Posts</h4>
+  @include('partials.related-posts')
 
   
 </article>
