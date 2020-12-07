@@ -28,7 +28,7 @@ class CMB2
             'type'        => 'group',
             // 'description' => esc_html__( 'Generates reusable form entries', 'egov' ),
             'options'     => array(
-                'group_title'    => esc_html__( 'Item {#}', 'egov' ), // {#} gets replaced by row number
+                'group_title'    => esc_html__( '{#}', 'egov' ), // {#} gets replaced by row number
                 'add_button'     => esc_html__( 'Add Another Item', 'egov' ),
                 'remove_button'  => esc_html__( 'Remove Item', 'egov' ),
                 'sortable'       => true,
@@ -39,7 +39,19 @@ class CMB2
         $cmb_group->add_group_field( $group_field_id, array(
             'name'       => esc_html__( 'Title', 'egov' ),
             'id'         => 'title',
-            'type'       => 'text',
+            'type'       => 'textarea_small',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+        $cmb_group->add_group_field( $group_field_id, array(
+            'name'       => esc_html__( 'Option 1', 'egov' ),
+            'id'         => 'option-1',
+            'type'       => 'textarea_small',
+            // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+        ) );
+        $cmb_group->add_group_field( $group_field_id, array(
+            'name'       => esc_html__( 'Option 2', 'egov' ),
+            'id'         => 'option-2',
+            'type'       => 'textarea_small',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
         $cmb_group->add_group_field( $group_field_id, array(
@@ -48,8 +60,6 @@ class CMB2
             'type'       => 'textarea_small',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
-
-
 
 
         /**

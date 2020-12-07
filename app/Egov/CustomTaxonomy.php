@@ -77,7 +77,7 @@ class CustomTaxonomy
              * (string) To change the base url of REST API route. 
              * Default is $taxonomy.
              */
-            'rest_base' => 'types',
+            'rest_base' => 'section-types',
 
             /**
              * (string) REST API Controller class name. 
