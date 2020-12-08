@@ -51,6 +51,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
-    "provincial-v2": "e-Goverment-Cambodia/provincial-v2"
+    "cnphtml": "github:e-Goverment-Cambodia/cnphtml",
+    "provincial-V2": "github:e-Goverment-Cambodia/provincial-v2"
   }
 }
