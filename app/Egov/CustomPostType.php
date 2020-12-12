@@ -14,7 +14,7 @@ class CustomPostType
         add_action( 'pre_get_posts', array( $this, 'addCPTAuthor') );
 
         // Add custom post type wp_block capability args
-        add_filter( 'register_post_type_args', array( $this, 'registerPostTypeArgs' ), 10, 2 );
+        // add_filter( 'register_post_type_args', array( $this, 'registerPostTypeArgs' ), 10, 2 );
     }
 
     public function registerPostTypeArgs( $args, $post_type ) {

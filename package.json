@@ -52,6 +52,10 @@
   },
   "dependencies": {
     "cnphtml": "github:e-Goverment-Cambodia/cnphtml",
-    "provincial-V2": "github:e-Goverment-Cambodia/provincial-v2"
+    "provincial-V2": "github:e-Goverment-Cambodia/provincial-v2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-images": "^1.1.7",
+    "react-photo-gallery": "^8.0.0"
   }
 }
