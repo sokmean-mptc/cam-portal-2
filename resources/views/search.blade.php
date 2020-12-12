@@ -15,5 +15,5 @@
       @include('partials.content-search')
     @endwhile
   </div>
-  {!! get_the_posts_navigation() !!}
+  @include('partials.paginate-link')
 @endsection

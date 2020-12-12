@@ -5,9 +5,11 @@
   @include('partials.page-header')
 
   @if (! have_posts())
+  <div class="container">
     <x-alert type="warning">
       {!! __('Sorry, no results were found.', 'egov') !!}
     </x-alert>
+  </div>
   @endif
 
   <div class="container block-list">
@@ -15,7 +17,6 @@
       @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
     @endwhile
   </div>
-  {{-- {!! get_the_posts_navigation() !!} --}}
   @include('partials.paginate-link')
 @endsection
 

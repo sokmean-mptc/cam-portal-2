@@ -5,7 +5,7 @@
 @if( $related ) 
     @foreach( $related as $post )
         @php( setup_postdata($post) )
-        <ul> 
+        <ul class="list-unstyled"> 
             <li>
                 <a href="{{ get_the_permalink() }}" rel="bookmark" title="{{ get_the_title() }}">{{ get_the_title() }}</a>
             </li>

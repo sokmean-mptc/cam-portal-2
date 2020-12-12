@@ -1,6 +1,6 @@
 @include('partials.header')
 
-<main class="main">
+<main class="main py-5">
   @yield('content')
 </main>
 

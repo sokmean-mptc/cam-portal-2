@@ -8,7 +8,23 @@ namespace App\Egov;
 class CustomTaxonomy
 {
     public function register() {
-        add_action( 'init', array( $this, 'registerCustomTaxonomy') );
+        add_action( 'init', array( $this, 'registerCustomTaxonomy' ) );
+        add_filter('template_include', array( $this, 'customTemplate' ) );
+    }
+
+    public function customTemplate( $template ) {   
+        global $wp_query; 
+        
+        // if( $wp_query->is_search && isset( $_GET['type'] ) && $_GET['type'] == 'category' ) {
+        //     return locate_template('archive.php');
+        // }
+        // if( $wp_query->is_search && isset( $_GET['post_type'] ) && $_GET['post_type'] == 'service' ) {
+        //     return locate_template('archive-service.php');
+        // }
+        if( $wp_query->is_search && isset( $_GET['type'] ) && $_GET['type'] == 'organization_type' ) {
+            return locate_template( 'resources/views/taxonomy-organization_type.blade.php' );
+        }
+        return $template;   
     }
 
     public function registerCustomTaxonomy() {

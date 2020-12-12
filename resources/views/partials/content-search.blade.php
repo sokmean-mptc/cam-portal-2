@@ -1,13 +1,11 @@
 <article class="wrap-item hrb" @php(post_class())>
   <h5 class="title">
-    <a target="_blank" href="{{ get_permalink() }}">{!! $title !!} <i class="ml-4 icofont-external-link"></i></a>
+    <a href="{{ get_permalink() }}">{!! $title !!} </a>
   </h5>
   <div class="excerpt">
-    @php(the_excerpt())
+    {!! mb_strimwidth( get_the_excerpt(), 0, 400, '...') !!}
   </div>
-  <div class="meta d-none">
-      <a href="{{ get_permalink() }}">
-          {{ __("Read More", "egov" )}} <i class="icofont-double-right"></i>
-      </a>
+  <div class="meta">
+      @include('partials.entry-meta')
   </div>
 </article>
