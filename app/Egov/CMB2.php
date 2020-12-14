@@ -23,6 +23,37 @@ class CMB2
             'title'        => esc_html__( 'Data Field Group', 'egov' ),
             'object_types' => array( 'section_data' ),
         ) );
+        $cmb_group->add_field( array(
+            'id'         => $prefix . 'title',
+            'type'       => 'text',
+            'name' => __( 'Title', 'egov' ),
+            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'egov' ),
+            'default' => 'Title'
+        ) );
+        $cmb_group->add_field( array(
+            'id'         => $prefix . 'option-1',
+            'type'       => 'text',
+            'name' => __( 'Option 1', 'egov' ),
+            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'egov' )
+        ) );
+        $cmb_group->add_field( array(
+            'id'         => $prefix . 'option-2',
+            'type'       => 'text',
+            'name' => __( 'Option 2', 'egov' ),
+            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'egov' )
+        ) );
+        $cmb_group->add_field( array(
+            'id'         => $prefix . 'value',
+            'type'       => 'text',
+            'name' => __( 'Value', 'egov' ),
+            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'egov' ),
+            'default' => 'Value '
+        ) );
+        $cmb_group->add_field( array(
+            'id'         => $prefix . 'description',
+            'type'       => 'textarea',
+            'name' => __( 'Description', 'egov' )
+        ) );
         $group_field_id = $cmb_group->add_field( array(
             'id'          => $prefix . 'items',
             'type'        => 'group',

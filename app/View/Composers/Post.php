@@ -26,8 +26,7 @@ class Post extends Composer
     {
         return [
             'title' => $this->title(),
-            'view' => $this->getPostViewCount(),
-            'pdf' => $this->getPdf(),
+            'view' => $this->getPostViewCount()
         ];
     }
 
@@ -102,11 +101,4 @@ class Post extends Composer
         return $value;
     }
 
-    public function getPdf() {
-		$items = get_post_meta( get_the_ID(), 'cam_group_pdf_items', true );
-		if( is_array( $items ) )
-		foreach( $items as $item ){
-			echo '<iframe src="https://docs.google.com/gview?url='.$item['pdf_url'].'&embedded=true" style="width:100%; height:1000px;" frameborder="0"></iframe>';
-		}
-	}
 }
