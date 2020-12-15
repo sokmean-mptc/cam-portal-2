@@ -1,4 +1,4 @@
-<article>
+<article class="container">
   
   {!! get_the_term_list( get_the_ID(), array('category','post_tag'), '<ul class="list-inline mb-1"><li class="list-inline-item">', '</li><li class="list-inline-item">', '</li></ul>' ) !!}
   
