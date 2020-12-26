@@ -25,39 +25,24 @@
       </picture>
     </a>
     <figcaption class="title">
-        <h2 class="site-title">{{ $siteName }}</h2>
-        @if ( function_exists( "get_sites" ) )
-          <div class="dropdown text-left">
-            <a id="my-dropdown" class="tagline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ __("រដ្ឋបាលខេត្តផ្សេងទៀត", "egov") }}</a>
-            <div class="dropdown-menu" aria-labelledby="my-dropdown">
-                <a class="dropdown-item active" href="#">រដ្ឋបាលខេត្តស្ទឹងត្រែង</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តសៀមរាប</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តព្រះសីហនុ</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តបាត់ដំបង</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តកំពង់ចាម</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តកណ្តាល</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តស្ទឹងត្រែង</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តសៀមរាប</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តព្រះសីហនុ</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តបាត់ដំបង</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តកំពង់ចាម</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តកណ្តាល</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តស្ទឹងត្រែង</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តសៀមរាប</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តព្រះសីហនុ</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តបាត់ដំបង</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តកំពង់ចាម</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តកណ្តាល</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តស្ទឹងត្រែង</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តសៀមរាប</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តព្រះសីហនុ</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តបាត់ដំបង</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តកំពង់ចាម</a>
-                <a class="dropdown-item" href="#">រដ្ឋបាលខេត្តកណ្តាល</a>
-            </div>
-          </div>  
-        @endif
-        
+      <h2 class="site-title">{{ $siteName }}</h2>
+      @if ( function_exists( "get_sites" ) )
+        @php
+          $subsites = get_sites( array( 'public' => 1, 'site__not_in' => get_current_blog_id() ) );
+        @endphp
+        <div class="dropdown text-left">
+          <a id="my-dropdown" class="tagline dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ __("Other Provincial websites", "sage") }}</a>
+          <div class="dropdown-menu" aria-labelledby="my-dropdown">
+          @foreach( $subsites as $subsite )
+            @php
+              $subsite_id = get_object_vars($subsite)["blog_id"];
+              $subsite_name = get_blog_details($subsite_id)->blogname;
+            @endphp
+            <a class="dropdown-item" href="http://{{ $subsite->domain }}">{{ $subsite_name }}</a>
+          @endforeach
+          </div>
+        </div>  
+      @endif
     </figcaption>
     <nav class="navbar ml-auto d-block d-lg-none">
       <button class="my-2 navbar-toggler navbar-toggler-right text-white nav-icon collapsed" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

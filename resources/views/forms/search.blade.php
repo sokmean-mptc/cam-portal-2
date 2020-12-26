@@ -3,9 +3,9 @@
   <div class="form-search mb-5 mt-0">
       <form role="search" action="{{ home_url('/') }}" method="get">
           <div class="input-field input-group">
-              <input type="search" class="text-field form-control" name="s" value="{{ get_search_query() }}" placeholder="{{ __("Search", "egov") }}" />
+              <input type="search" class="text-field form-control" name="s" value="{{ get_search_query() }}" placeholder="{{ __("Search", "sage") }}" />
               <div class="input-group-append">
-                  <button type="submit" class="submit-field btn btn-primary"><span class="d-none d-md-inline">{{ __("Search", "egov") }}</span> <i class="icofont-search"></i></button>
+                  <button type="submit" class="submit-field btn btn-primary"><span class="d-none d-md-inline">{{ __("Search", "sage") }}</span> <i class="icofont-search"></i></button>
               </div>
           </div>
       </form>

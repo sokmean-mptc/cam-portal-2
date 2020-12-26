@@ -56,7 +56,7 @@
 		@if ( count( $term_parents ) > 1 && ! count( $term_childrens ) )
             <div class="col-sm-3 pr-sm-0">
                 <select class="custom-select option-typeahead" onchange="location = this.value;">
-                    <option value="#" selected>{{ __( 'Select', 'egov' ) }}</option>
+                    <option value="#" selected>{{ __( 'Select', 'sage' ) }}</option>
                     @foreach ( $term_parents as $parent )
                         @php
                             $active = ( $current_term->parent == $parent->term_id ) ? 'selected' : '';
@@ -88,7 +88,7 @@
         @if ( count( $term_siblings ) > 1 )
             <div class="col-sm-3 pr-sm-0 {{ isset( $child_pl ) ? $child_pl : '' }}">
                 <select class="custom-select option-typeahead" onchange="location = this.value;">
-                    <option value="#" selected>{{ __( 'Select', 'egov' ) }}</option>
+                    <option value="#" selected>{{ __( 'Select', 'sage' ) }}</option>
                     @foreach ( $term_siblings as $sibling ) 
                         @php
                             $active = ( $current_term->term_id == $sibling->term_id ) ? 'selected' : '';
@@ -122,7 +122,7 @@
 		@if ( count( $term_childrens ) > 1 )
             <div class="col-sm-3 pr-sm-0 {{ isset( $child_pl ) ? $child_pl : '' }}">
                 <select class="custom-select option-typeahead" onchange="location = this.value;">
-                    <option value="#" selected>{{ __( 'Select', 'egov' ) }}</option>
+                    <option value="#" selected>{{ __( 'Select', 'sage' ) }}</option>
                     @foreach ( $term_childrens as $child ) {
                         @php 
                             $args = array(
@@ -157,8 +157,8 @@
 			<input type="hidden" name="post_type" value="organization" />
 			
 			<div class="relative">
-				<input name="s" value="{{ get_search_query() }}" placeholder="{{ __( 'Search', 'egov' ) }}" type="text" class="form-control" autocomplete="off" />
-				<button class="btn btn-secondary" type="submit">{{ __( 'Search', 'egov' ) }}</button>
+				<input name="s" value="{{ get_search_query() }}" placeholder="{{ __( 'Search', 'sage' ) }}" type="text" class="form-control" autocomplete="off" />
+				<button class="btn btn-secondary" type="submit">{{ __( 'Search', 'sage' ) }}</button>
 			</div>
 		</div>
 	</div>

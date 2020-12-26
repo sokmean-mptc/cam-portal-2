@@ -20,73 +20,73 @@ class CMB2
          */
         $cmb_group = new_cmb2_box( array(
             'id'           => $prefix . 'metabox',
-            'title'        => esc_html__( 'Data Field Group', 'egov' ),
+            'title'        => esc_html__( 'Data Field Group', 'sage' ),
             'object_types' => array( 'section_data' ),
         ) );
         $cmb_group->add_field( array(
             'id'         => $prefix . 'title',
             'type'       => 'text',
-            'name' => __( 'Title', 'egov' ),
-            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'egov' ),
+            'name' => __( 'Title', 'sage' ),
+            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'sage' ),
             'default' => 'Title'
         ) );
         $cmb_group->add_field( array(
             'id'         => $prefix . 'option-1',
             'type'       => 'text',
-            'name' => __( 'Option 1', 'egov' ),
-            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'egov' )
+            'name' => __( 'Option 1', 'sage' ),
+            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'sage' )
         ) );
         $cmb_group->add_field( array(
             'id'         => $prefix . 'option-2',
             'type'       => 'text',
-            'name' => __( 'Option 2', 'egov' ),
-            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'egov' )
+            'name' => __( 'Option 2', 'sage' ),
+            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'sage' )
         ) );
         $cmb_group->add_field( array(
             'id'         => $prefix . 'value',
             'type'       => 'text',
-            'name' => __( 'Value', 'egov' ),
-            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'egov' ),
+            'name' => __( 'Value', 'sage' ),
+            'desc' => __( 'The column heading, leave this empty that mean display none of this column', 'sage' ),
             'default' => 'Value '
         ) );
         $cmb_group->add_field( array(
             'id'         => $prefix . 'description',
             'type'       => 'textarea',
-            'name' => __( 'Description', 'egov' )
+            'name' => __( 'Description', 'sage' )
         ) );
         $group_field_id = $cmb_group->add_field( array(
             'id'          => $prefix . 'items',
             'type'        => 'group',
-            // 'description' => esc_html__( 'Generates reusable form entries', 'egov' ),
+            // 'description' => esc_html__( 'Generates reusable form entries', 'sage' ),
             'options'     => array(
-                'group_title'    => esc_html__( '{#}', 'egov' ), // {#} gets replaced by row number
-                'add_button'     => esc_html__( 'Add Another Item', 'egov' ),
-                'remove_button'  => esc_html__( 'Remove Item', 'egov' ),
+                'group_title'    => esc_html__( '{#}', 'sage' ), // {#} gets replaced by row number
+                'add_button'     => esc_html__( 'Add Another Item', 'sage' ),
+                'remove_button'  => esc_html__( 'Remove Item', 'sage' ),
                 'sortable'       => true,
                 'closed'      => true, // true to have the groups closed by default
-                // 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'egov' ), // Performs confirmation before removing group.
+                // 'remove_confirm' => esc_html__( 'Are you sure you want to remove?', 'sage' ), // Performs confirmation before removing group.
             ),
         ) );
         $cmb_group->add_group_field( $group_field_id, array(
-            'name'       => esc_html__( 'Title', 'egov' ),
+            'name'       => esc_html__( 'Title', 'sage' ),
             'id'         => 'title',
             'type'       => 'textarea_small',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
         $cmb_group->add_group_field( $group_field_id, array(
-            'name'       => esc_html__( 'Option 1', 'egov' ),
+            'name'       => esc_html__( 'Option 1', 'sage' ),
             'id'         => 'option-1',
             'type'       => 'textarea_small',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
         $cmb_group->add_group_field( $group_field_id, array(
-            'name'       => esc_html__( 'Option 2', 'egov' ),
+            'name'       => esc_html__( 'Option 2', 'sage' ),
             'id'         => 'option-2',
             'type'       => 'textarea_small',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
         ) );
         $cmb_group->add_group_field( $group_field_id, array(
-            'name'       => esc_html__( 'Value', 'egov' ),
+            'name'       => esc_html__( 'Value', 'sage' ),
             'id'         => 'value',
             'type'       => 'textarea_small',
             // 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
@@ -99,22 +99,22 @@ class CMB2
          */
         $cmb_pdf_field_grp = new_cmb2_box( array(
             'id'           => $prefix . 'pdf_metabox',
-            'title'        => esc_html__( 'Select FDF file below :', 'egov' ),
+            'title'        => esc_html__( 'Select FDF file below :', 'sage' ),
             'object_types' => array( 'post' ),
         ) );
         $group_pdf_field_id = $cmb_pdf_field_grp->add_field( array(
             'id'          => $prefix . 'pdf_items',
             'type'        => 'group',
             'options'     => array(
-                'group_title'    => esc_html__( 'PDF File {#}', 'egov' ), // {#} gets replaced by row number
-                'add_button'     => esc_html__( 'Add More PDF', 'egov' ),
-                'remove_button'  => esc_html__( 'Remove This PDF', 'egov' ),
+                'group_title'    => esc_html__( 'PDF File {#}', 'sage' ), // {#} gets replaced by row number
+                'add_button'     => esc_html__( 'Add More PDF', 'sage' ),
+                'remove_button'  => esc_html__( 'Remove This PDF', 'sage' ),
                 'sortable'       => true,
                 'closed'      => false, // true to have the groups closed by default
             ),
         ) );
         $cmb_pdf_field_grp->add_group_field( $group_pdf_field_id, array(
-            'name'       => esc_html__( 'Choose PDF File :', 'egov' ),
+            'name'       => esc_html__( 'Choose PDF File :', 'sage' ),
             'id'         => 'pdf_url',
             'type'       => 'file',
             'query_args' => array( 'type' => 'application/pdf'),
@@ -217,8 +217,8 @@ class CMB2
             'id'        => $prefix . 'category_blog',
             'type'      => 'radio_inline',
             'options'	=> array(
-                'default'	=> __( 'Default', 'egov' ), 
-                'document'	=> __( 'Document', 'egov' ), 
+                'default'	=> __( 'Default', 'sage' ), 
+                'document'	=> __( 'Document', 'sage' ), 
             ),
             'default'	=> 'default'
             

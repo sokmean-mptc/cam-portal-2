@@ -9,6 +9,10 @@
   </header>
   <small class="meta mb-5">
     @include('partials.entry-meta')
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_inline_share_toolbox_vjl2 mb-2 mb-md-4"></div>
+            
   </small>
   <div class="entry-content mb-5">
     {!! get_the_content() !!}
@@ -21,13 +25,13 @@
         <div class="mb-5">
           <i class="text-success icofont-download"></i>
           <a href="{{ $item['pdf_url'] }}">
-            {{ __( 'Download', 'egov' ) }}
+            {{ __( 'Download', 'sage' ) }}
           </a>
         </div>
       @endforeach
     @endif
   </div>
-  <h4>{{ __("Related Posts","egov") }}</h4>
+  <h4>{{ __("Related Posts","sage") }}</h4>
   @include('partials.related-posts')
 
   

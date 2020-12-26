@@ -47,12 +47,12 @@ class CustomizeLogo
                 /**
                  * (string) Title of the panel to show in UI.
                  */
-                'title' => __( 'Panel Title', 'cam' ),
+                'title' => __( 'Panel Title', 'sage' ),
 
                 /**
                  * (string) Description to show in the UI.
                  */
-                'description' => __( 'Panel Description', 'cam' ),
+                'description' => __( 'Panel Description', 'sage' ),
 
                 /**
                  * (string) Type of the panel.
@@ -106,12 +106,12 @@ class CustomizeLogo
                 /**
                  * (string) Title of the section to show in UI.
                  */
-                'title' => __( 'Section Title', 'cam' ),
+                'title' => __( 'Section Title', 'sage' ),
 
                 /**
                  * (string) Description to show in the UI.
                  */
-                'description' => __( 'Section Description', 'cam' ),
+                'description' => __( 'Section Description', 'sage' ),
 
                 /**
                  * (string) Type of the section.
@@ -168,7 +168,7 @@ class CustomizeLogo
                     'section' => 'title_tagline',
                     'label' => 'Site Logo',
                     'settings' => 'logo_small_setting_id',
-                    'description' => __( '<p>Select site logos from media uploader or upload from your pc.</p>Choose each 3 image that has the same aspectratio (1:1) but different dimension size depend on responsive for mobile, tablet and desktop. <br/>1X = 60 × 60 pixels', 'cam' ),
+                    'description' => __( '<p>Select site logos from media uploader or upload from your pc.</p>Choose each 3 image that has the same aspectratio (1:1) but different dimension size depend on responsive for mobile, tablet and desktop. <br/>1X = 60 × 60 pixels', 'sage' ),
                 )
             )
         );
@@ -182,7 +182,7 @@ class CustomizeLogo
                     'height' => 90,
                     'section' => 'title_tagline',
                     'settings' => 'logo_medium_setting_id',
-                    'description' => __( '2X = 90 × 90 pixels', 'cam' ),
+                    'description' => __( '2X = 90 × 90 pixels', 'sage' ),
                 )
             )
         );
@@ -196,7 +196,7 @@ class CustomizeLogo
                     'height' => 120,
                     'section' => 'title_tagline',
                     'settings' => 'logo_large_setting_id',
-                    'description' => __( '3X = 120 × 120 pixels', 'cam' ),
+                    'description' => __( '3X = 120 × 120 pixels', 'sage' ),
                 )
             )
         );

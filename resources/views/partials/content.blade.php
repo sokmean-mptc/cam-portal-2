@@ -1,4 +1,4 @@
-<article class="wrap-item hrb" @php(post_class())>
+<article class="wrap-item hrb" @php post_class() @endphp>
   <h5 class="title">
     <a href="{{ get_permalink() }}">{!! $title !!} </a>
   </h5>

@@ -36,13 +36,13 @@ class CustomTaxonomy
              * See accepted values in get_taxonomy_labels().
              */
             'labels' => array(
-                'name' => __( 'Types', 'egov' )
+                'name' => __( 'Types', 'sage' )
             ),
 
             /**
              * (string) A short descriptive summary of what the taxonomy is for.
              */
-            'description' => __( 'Section Type Taxonomy created for stor group type of tourism.', 'egov' ),
+            'description' => __( 'Section Type Taxonomy created for stor group type of tourism.', 'sage' ),
             
             
             /**
@@ -209,13 +209,13 @@ class CustomTaxonomy
              * See accepted values in get_taxonomy_labels().
              */
             'labels' => array(
-                'name' => __( 'Sector', 'egov' )
+                'name' => __( 'Sector', 'sage' )
             ),
 
             /**
              * (string) A short descriptive summary of what the taxonomy is for.
              */
-            'description' => __( 'Sector', 'egov' ),
+            'description' => __( 'Sector', 'sage' ),
             
             
             /**
@@ -382,13 +382,13 @@ class CustomTaxonomy
              * See accepted values in get_taxonomy_labels().
              */
             'labels' => array(
-                'name' => __( 'Organization Type', 'egov' )
+                'name' => __( 'Organization Type', 'sage' )
             ),
 
             /**
              * (string) A short descriptive summary of what the taxonomy is for.
              */
-            'description' => __( 'Organization Type', 'egov' ),
+            'description' => __( 'Organization Type', 'sage' ),
             
             
             /**

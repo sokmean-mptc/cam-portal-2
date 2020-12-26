@@ -68,7 +68,7 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     // register_nav_menus([
-    //     'primary_navigation' => __('Primary Navigation', 'egov')
+    //     'primary_navigation' => __('Primary Navigation', 'sage')
     // ]);
 
     /**
@@ -107,11 +107,14 @@ add_action('after_setup_theme', function () {
      */
     // add_theme_support('editor-color-palette', [
     //     [
-    //         'name'  => __('Primary', 'egov'),
+    //         'name'  => __('Primary', 'sage'),
     //         'slug'  => 'primary',
     //         'color' => '#525ddc',
     //     ]
     // ]);
+
+    load_theme_textdomain('sage', get_template_directory() . '/resources/languages');
+
 }, 20);
 
 /**
@@ -128,12 +131,19 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-        'name' => __('Primary', 'egov'),
+        'name' => __('Primary', 'sage'),
         'id' => 'sidebar-primary'
     ] + $config);
 
     register_sidebar([
-        'name' => __('Footer', 'egov'),
+        'name' => __('Footer', 'sage'),
         'id' => 'sidebar-footer'
     ] + $config);
 });
+
+// add_filter('locale', function () {
+//     if ( ! is_front_page() ) {
+//         return 'km';
+//     }
+//     return $locale;
+// });

@@ -47,7 +47,7 @@ class Post extends Composer
                 return get_the_title($home);
             }
 
-            return __('Latest Posts', 'cam');
+            return __('Latest Posts', 'sage');
         }
 
         if (is_archive()) {
@@ -57,13 +57,13 @@ class Post extends Composer
         if (is_search()) {
             /* translators: %s is replaced with the search query */
             return sprintf(
-                __('Search Results for %s', 'cam'),
+                __('Search Results for %s', 'sage'),
                 get_search_query()
             );
         }
 
         if (is_404()) {
-            return __('Not Found', 'cam');
+            return __('Not Found', 'sage');
         }
 
         return get_the_title();
@@ -87,13 +87,13 @@ class Post extends Composer
 
         switch ( $count ) {
             case 2:
-                $value = number_format_i18n( $number/1000, 1 ) . __( 'K', 'cam' );
+                $value = number_format_i18n( $number/1000, 1 ) . __( 'K', 'sage' );
                 break;
             case 3:
-                $value = number_format_i18n( $number/1000000, 1 ) . __( 'M', 'cam' );
+                $value = number_format_i18n( $number/1000000, 1 ) . __( 'M', 'sage' );
                 break;
             case 4:
-                $value = number_format_i18n( $number/1000000000, 1 ) . __( 'G', 'cam' );
+                $value = number_format_i18n( $number/1000000000, 1 ) . __( 'G', 'sage' );
                 break;
             default:
                 $value = $number;

@@ -6,7 +6,7 @@
 	<ul>
 
 		@if ( get_post_meta( get_the_id(), 'cam_portal_dept_address', true ) )
-			<li class="item-wrap"><span class="item-title primary-color">{{ __( 'Address : ', 'egov' ) }}</span>
+			<li class="item-wrap"><span class="item-title primary-color">{{ __( 'Address : ', 'sage' ) }}</span>
 				<ul>
 					<li>{!! get_post_meta ( get_the_id(), 'cam_portal_dept_address', true ) !!}</li>
 				</ul>
@@ -14,7 +14,7 @@
 		@endif
 
 		@if ( get_post_meta ( get_the_id(), 'cam_portal_dept_address_maps', true ) )
-			<li class="item-wrap"><span class="item-title primary-color">{{ __( 'Map : ', 'egov' ) }}</span>
+			<li class="item-wrap"><span class="item-title primary-color">{{ __( 'Map : ', 'sage' ) }}</span>
 				<div style="margin: 0 -15px -15px;" class="map">
 					<div class="google-map-api" data-title="{!! $title !!}" data-latlng="{{ get_post_meta ( get_the_id(), 'cam_portal_dept_address_maps', true ) }}" style="height:400px;"></div>
 				</div>
@@ -22,7 +22,7 @@
 		@endif
 
 		@if ( is_array( get_post_meta( get_the_id(), 'cam_portal_dept_contact_group', true ) ) && count ( get_post_meta( get_the_id(), 'cam_portal_dept_contact_group', true ) ) )
-		<li class="item-wrap"><span class="item-title primary-color">{{ __( 'Contact : ', 'egov') }}</span>
+		<li class="item-wrap"><span class="item-title primary-color">{{ __( 'Contact : ', 'sage') }}</span>
 			<ul>
 				@foreach ( get_post_meta( get_the_id(), 'cam_portal_dept_contact_group', true ) as $item )
 					<li class="item">

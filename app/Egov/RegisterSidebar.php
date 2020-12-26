@@ -20,13 +20,13 @@ class RegisterSidebar
         );
         register_sidebar( 
             array(
-                'name' => __( 'Primary', 'cam' ),
+                'name' => __( 'Primary', 'sage' ),
                 'id' => 'sidebar-primary'
             ) + $config
         );
         register_sidebar( 
             array(
-                'name' => __('Copyright', 'cam'),
+                'name' => __('Copyright', 'sage'),
                 'id' => 'sidebar-copyright'
             ) + $config
         );

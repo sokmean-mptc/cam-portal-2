@@ -7,9 +7,11 @@
   @include('partials.page-header')
 
   @if (! have_posts())
+  <div class="container">
     <x-alert type="warning">
-      {!! __('Sorry, no results were found.', 'egov') !!}
+      {!! __('Sorry, no results were found.', 'sage') !!}
     </x-alert>
+  </div>
   @endif
 
   <div class="container">

@@ -11,6 +11,12 @@ namespace App;
  *
  * @return string
  */
-add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'egov') . '</a>';
+// add_filter('excerpt_more', function () {
+//     return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+// });
+
+add_filter('excerpt_length', function () {
+
+    return 400;
+
 });

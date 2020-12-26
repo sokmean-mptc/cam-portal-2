@@ -49,7 +49,7 @@ class CustomPostType
              * (string) Name of the post type shown in the menu. Usually plural. 
              * Default is value of $labels['name'].
              */
-            'label' => __( 'Sections', 'egov' ), 
+            'label' => __( 'Sections', 'sage' ), 
             
             /**
              * (array) An array of labels for this post type. 
@@ -61,7 +61,7 @@ class CustomPostType
             /**
              * (string) A short descriptive summary of what the post type is.
              */
-            'description' => __( 'This post type is create for display tourism sector each provincial and type in Cambodia.', 'egov' ), 
+            'description' => __( 'This post type is create for display tourism sector each provincial and type in Cambodia.', 'sage' ), 
             
             /**
              * (bool) Whether a post type is intended for use publicly either via the admin interface or by front-end users. 
@@ -277,7 +277,7 @@ class CustomPostType
              * (string) Name of the post type shown in the menu. Usually plural. 
              * Default is value of $labels['name'].
              */
-            'label' => __( 'Organization', 'egov' ), 
+            'label' => __( 'Organization', 'sage' ), 
             
             /**
              * (array) An array of labels for this post type. 
@@ -289,7 +289,7 @@ class CustomPostType
             /**
              * (string) A short descriptive summary of what the post type is.
              */
-            'description' => __( 'Organization', 'egov' ), 
+            'description' => __( 'Organization', 'sage' ), 
             
             /**
              * (bool) Whether a post type is intended for use publicly either via the admin interface or by front-end users. 
