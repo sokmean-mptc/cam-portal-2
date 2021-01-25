@@ -99,7 +99,7 @@
       /*level 1 on active*/
       .navbar ul.menu > li.current-menu-item > a,
       .navbar ul.menu > li.current-post-ancestor > a,
-      .navbar ul.menu > li.current-menu-ancestor > a { border-bottom: 2px solid #0956AE;; color: #000; }
+      .navbar ul.menu > li.current-menu-ancestor > a { border-bottom: 2px solid #0956AE; color: #000; }
       /*level 1 dropdown arrow color*/
       .navbar ul.menu > li.menu-item-has-children > a::after { border-top-color: rgba(0, 0, 0, 0.1); }
       /*level 1 dropdown arrow color on active*/
@@ -108,13 +108,15 @@
       .navbar ul.menu > li.menu-item-has-children.current-post-ancestor > a::after { border-top-color: #fff; }
       
       /*nex level*/
+      .navbar ul.menu li ul > li { padding-left: 20px; }
       .navbar ul.menu li ul { background-color: #F5F6FA; min-width: 220px; }
       .navbar ul.menu li ul li a { color: #343a40; font-size: 17px; padding-top: 10px; padding-bottom: 10px;}
       /*next level on active */
+      .navbar ul.menu li ul li.current-menu-item > a { font-weight: bold; }
       .navbar ul.menu li ul li.current-menu-item > a,
       .navbar ul.menu li ul li.current-menu-ancestor > a,
       .navbar ul.menu li ul li.current-post-ancestor > a,
-      .navbar ul.menu li ul li a:hover { color: #343a40; background-color: rgba(0, 0, 0, 0.1); }
+      .navbar ul.menu li ul li a:hover { color: #343a40; }
       /*next level dropdown arrow color*/
       .navbar ul.menu li ul li.menu-item-has-children > a::after { border-left-color: rgba(0, 0, 0, 0.1); }
       /*next level dropdown arrow color on active*/
@@ -161,3 +163,5 @@
       .navbar ul.menu li ul li.menu-item-has-children.current-post-ancestor > a::after { border-top-color: rgba(0, 0, 0, 0.1); }
   }
   </style>
+
+  

@@ -6,6 +6,10 @@
 
 import 'provincial-v2/dist/main.js'
 
+jQuery('.map-collapse').on( 'click', function(){
+  jQuery(this).children().toggleClass('icofont-plus icofont-minus')
+})
+
 import React, { useState, useCallback } from "react";
 import ReactDOM from "react-dom";
 import Gallery from "react-photo-gallery";

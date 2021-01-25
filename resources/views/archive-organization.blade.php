@@ -14,14 +14,12 @@
   </div>
   @endif
 
-  <div class="container">
+  <div class="container mb-6">
     <section class="section">
       <div class="collapsible">
-        <ul>
           @while(have_posts()) @php(the_post())
             @includeFirst(['partials.content-' . get_post_type(), 'partials.content'])
           @endwhile
-        </ul>
       </div>
     </section>
   </div>

@@ -50,7 +50,7 @@
 @endphp
 
 <form class="service-filter" method="GET" action="{{ home_url('/') }}">
-	<div class="form-group row mb-0">		
+	<div class="form-group row mb-2 mb-md-6">		
 	
 		<!-- parent -->
 		@if ( count( $term_parents ) > 1 && ! count( $term_childrens ) )
@@ -156,7 +156,7 @@
 			<input type="hidden" name="type" value="organization_type" />
 			<input type="hidden" name="post_type" value="organization" />
 			
-			<div class="relative">
+			<div class="position-relative">
 				<input name="s" value="{{ get_search_query() }}" placeholder="{{ __( 'Search', 'sage' ) }}" type="text" class="form-control" autocomplete="off" />
 				<button class="btn btn-secondary" type="submit">{{ __( 'Search', 'sage' ) }}</button>
 			</div>
