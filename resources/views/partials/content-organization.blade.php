@@ -6,7 +6,7 @@
 		</div>
 	</div>
 
-	<ul>
+	<div class="collapse pl-3 pt-3 pr-3 border border-light" id="collapseExample-{{ get_the_id() }}">
 
 		@if ( get_post_meta( get_the_id(), 'cam_portal_dept_address', true ) )
 		<ul class="list-unstyled">
