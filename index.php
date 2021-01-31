@@ -14,7 +14,7 @@
     <?php wp_head(); ?>
   </head>
 
-  <body id="body" <?php body_class(); ?>>
+  <body data-spy="scroll" data-target="#menu-tab" data-offset="10" id="body" <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 
