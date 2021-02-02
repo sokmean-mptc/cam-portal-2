@@ -14,3 +14,20 @@
 
 @import "~provincial-v2/dist/main.css";
 // @import "~cnphtml/dist/main.css";
+.twitter-typeahead {
+    width: 100%;
+  
+    .tt-hint {
+      color: #ccc;
+    }
+  
+    .tt-menu {
+      background-color: #eee;
+      padding: 15px;
+      width: 100%;
+  
+      .tt-suggestion.tt-cursor {
+        font-weight: bold;
+      }
+    }
+  }
