@@ -61,23 +61,35 @@ ReactDOM.render(<App />, document.getElementById("gallery"));
 
 const Handlebars = require("handlebars")
 jQuery('.search-typeahead').each( function(){
-  let data = new Bloodhound({
+  var data = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.whitespace,
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    remote: this.dataset.apiurl,
-  });
-  jQuery(this).typeahead( null, {
-    name: 'service',
-    displayKey:'title',
-    source: data.ttAdapter(),
-    templates: {
-      empty: [
-        '<div class="empty-message">',
-        'Not Found',
-        '</div>'
-      ].join('\n'),
-        suggestion: Handlebars.compile('<p><a href="{{url}}">{{title}}</a></p>')
+    prefetch: {
+      url: this.dataset.apiurl,
+      // cache: false,
+      // ttl: 10000,
+      transform: function( respose ) {
+        let res = []
+        for( let i of respose ) {
+          res.push([i['title'],{title:i['title'],url:i['url']}])
+        }
+        return res
+      }
     }
+  })
+
+
+  jQuery(this).typeahead( { 
+    minLength: 0,
+    highlight: true
+  }, {
+    name: 'service-json',
+    display:'title',
+    source: data,
+    templates: {
+      suggestion: Handlebars.compile('<p><a href="{{url}}">{{title}}</a></p>')
+    },
+    limit:10
   } )
 
   jQuery(this).bind('typeahead:select', function(ev, suggestion) {
