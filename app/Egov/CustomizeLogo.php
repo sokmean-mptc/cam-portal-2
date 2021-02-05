@@ -157,6 +157,17 @@ class CustomizeLogo
                 'transport' => 'refresh',
             )
         );
+
+        $manager->add_setting(
+            'theme_color_setting',
+            array(
+                'type' => 'theme_mod',
+                'capability' => 'edit_theme_options',
+                'transport' => 'refresh',
+                'default' => '#0956AE',
+                'sanitize_callback' => 'sanitize_hex_color'
+            )
+        );
         
         $manager->add_control( 
             new \WP_Customize_Cropped_Image_Control(
@@ -197,6 +208,18 @@ class CustomizeLogo
                     'section' => 'title_tagline',
                     'settings' => 'logo_large_setting_id',
                     'description' => __( '3X = 120 × 120 pixels', 'sage' ),
+                )
+            )
+        );
+
+        $manager->add_control( 
+            new \WP_Customize_Color_Control(
+                $manager,
+                'color_control', 
+                array(
+                    'section' => 'title_tagline',
+                    'settings' => 'theme_color_setting',
+                    'label'      => __( 'Theme Color', 'sage' )
                 )
             )
         );

@@ -85,8 +85,29 @@
   </div>
 </nav>
 @endif
-
+@if ( get_theme_mod( 'theme_color_setting' ) ) 
 <style type="text/css">
+  .primary-color,
+  .service-detail .scrollspy-content .list-title > *,
+  .header .title .site-title,
+  .header .social li a,
+  footer .social li a,
+  footer .footer-nabar li a,
+  .block-heading h4,
+  .block-heading h4 * { color: {{get_theme_mod( 'theme_color_setting' )}} !important;}
+  .navbar.navbar-light ul.menu > li > a:hover,
+  .navbar.navbar-light ul.menu > li.current-menu-item > a, 
+  .navbar.navbar-light ul.menu > li.current-post-ancestor > a, 
+  .navbar.navbar-light ul.menu > li.current-menu-ancestor > a,
+  .header .title .dropdown-menu { border-bottom-color: {{get_theme_mod( 'theme_color_setting' )}}; }
+  .service-detail .list-group .list-group-item.active { border-left-color: {{get_theme_mod( 'theme_color_setting' )}}; }
+  .main-slideshow .slick-list .slick-track figure figcaption,
+  .bg-primary,
+  .block-news .slide-news .b-item .b-date-wrap .b-date { background-color: {{get_theme_mod( 'theme_color_setting' )}} !important; }
+</style>
+@endif
+<style type="text/css">
+  
   /* custom theme options default for navbar */
   /* .navbar { background-color: #f8f9fa; } */
   .navbar .navbar-toggler { background-color: #0956AE;; }
