@@ -1,10 +1,10 @@
 <footer>
-  <div class="container-fluid">
+  <div class="container">
     <nav class="d-md-flex justify-content-between"> 
         
         @if ( has_nav_menu( 'social_menu' ) )
         <ul class="d-flex justify-content-center social">
-          <li>{{ __( 'Follow Us', 'sage' ) }}</li>
+          {{-- <li>{{ __( 'Follow Us', 'sage' ) }}</li> --}}
           {!! 
               wp_nav_menu( 
               array(
@@ -31,8 +31,8 @@
   </div>
 
 
-  <div class="container-fluid text-center">
-    <small class="copyright">@php(dynamic_sidebar('sidebar-copyright'))</small>
+  <div class="container text-center">
+    <small class="copyright primary-color">@php(dynamic_sidebar('sidebar-copyright'))</small>
   </div>
 </footer>
 <div class="scroll-to-top">

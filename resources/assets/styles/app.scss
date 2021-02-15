@@ -31,3 +31,49 @@
       }
     }
   }
+
+  .header {
+    .title {
+      .site-title {
+        font-family: 'moul';
+      }
+    }
+    > div {
+      margin: auto 0px;
+    }
+    .social {
+      li {
+        a {
+          color: #fff;
+          background-color: #ddd;
+          padding: 7px;
+          border-radius: 50%;
+          font-size: 22px;
+          display: flex;
+        }
+      }
+    }
+  }
+  footer {
+    .social {
+      li {
+        a {
+          color: #fff;
+          background-color: #ddd;
+          padding: 7px;
+          border-radius: 50%;
+          font-size: 22px;
+          display: flex;
+        }
+      }
+    }
+  }
+  .font-moul {
+    font-family: 'moul';
+  }
+
+  // .block-heading {
+  //   * {
+  //     font-family: 'moul';
+  //   }
+  // }
