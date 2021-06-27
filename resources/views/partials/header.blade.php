@@ -87,6 +87,8 @@
 @endif
 @if ( get_theme_mod( 'theme_color_setting' ) ) 
 <style type="text/css">
+  .primary-bg-color img { background-color: {{get_theme_mod( 'theme_color_setting' )}}; }
+  .block-topic article figure img { border-radius: 50%; background-color: {{get_theme_mod( 'theme_color_setting' )}}; }
   .primary-color,
   .service-detail .scrollspy-content .list-title > *,
   .header .title .site-title,
