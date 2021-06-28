@@ -8,7 +8,7 @@
   </li>
   <li class="list-inline-item">
     <span>{{ __('By', 'sage') }}</span>
-    <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="">
+    <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="text-secondary">
       {{ get_the_author() }}
     </a>
   </li>

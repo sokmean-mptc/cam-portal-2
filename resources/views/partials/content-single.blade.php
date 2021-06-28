@@ -31,7 +31,9 @@
       @endforeach
     @endif
   </div>
+  <div class="block-heading text-left">
   <h4>{{ __("Related Posts","sage") }}</h4>
+  </div>
   @include('partials.related-posts')
 
   

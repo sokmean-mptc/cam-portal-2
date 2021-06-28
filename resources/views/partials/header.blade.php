@@ -1,5 +1,5 @@
 <header class="container d-lg-flex justify-content-between header">
-  <figure class="d-flex m-0">
+  <figure class="d-flex m-0 align-items-center">
     <a class="mr-3" href="{{ home_url('/') }}">
         
         <picture>
@@ -24,9 +24,10 @@
           @endif
       </picture>
     </a>
-    <figcaption class="title">
+    <figcaption class="title mt-0">
       <h2 class="site-title">{{ $siteName }}</h2>
-      @if ( function_exists( "get_sites" ) )
+      <span class="sub-title">{{ bloginfo('description') }}</span>
+      {{-- @if ( function_exists( "get_sites" ) )
         @php
           $subsites = get_sites( array( 'public' => 1, 'site__not_in' => get_current_blog_id() ) );
         @endphp
@@ -42,7 +43,7 @@
           @endforeach
           </div>
         </div>  
-      @endif
+      @endif --}}
     </figcaption>
     <nav class="navbar ml-auto d-block d-lg-none">
       <button class="my-2 navbar-toggler navbar-toggler-right text-white nav-icon collapsed" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,6 +93,7 @@
   .primary-color,
   .service-detail .scrollspy-content .list-title > *,
   .header .title .site-title,
+  .header .title .sub-title,
   .header .title .tagline,
   .header .social li .a,
   footer .social li .a,
@@ -121,11 +123,17 @@
 </style>
 @endif
 <style type="text/css">
+  .service-detail .list-group .list-group-item,
+  .block-topic a,
+  .service-detail a {color: #333;}
+  .pagination.light .nav-links .page-numbers { color: #333; }
+  .header .title .site-title { font-size: 44px; font-weight: bold; font-family: 'Koh-Santepheap-Body';}
+  .header .title .sub-title { font-size: 22px; }
   .navbar ul.menu > li > a i { font-size: 25px; }
   /*desktop screen*/
   @media (min-width: 992px) {
       /*level 1*/
-      .navbar ul.menu > li { padding: 0px; margin-right: 20px; display: inline-block; }
+      .navbar ul.menu > li { padding: 0px; margin-right: 0px; display: inline-block; }
       .navbar ul.menu > li > a { color: #555; font-size: 18px; padding: 15px; }
       /*level 1 on hover*/
       .navbar ul.menu > li > a:hover { color: #000; border-bottom: 2px solid #0956AE; }
@@ -159,12 +167,16 @@
   }
   /* medium devices (tablets, 768px and up) */
   @media (min-width: 768px) and (max-width: 1024px) {
+    .header .title .site-title { font-size: 34px; }
+    .header .title .sub-title { font-size: 18px; }
       .navbar ul.menu > li > a {
           font-size: 16px;
       }
   }
   /* medium devices (tablets, 768px and up) */
   @media (min-width: 0px) and (max-width: 991.98px) {
+      .header .title .site-title { font-size: 30px;}
+      .header .title .sub-title { font-size: 16px; }
       /*level 1*/
       .navbar ul.menu > li > a { color: #343a40; font-size: 16px; }
       /*level 1 on active*/
